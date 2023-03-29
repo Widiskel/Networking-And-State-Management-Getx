@@ -7,12 +7,12 @@ class BookRepo {
   final DioClient dioClient;
   BookRepo(this.dioClient);
 
-  Future getBook() async {
+  Future getBook({String isbn = '9780131495050'}) async {
     try {
       final response = await dioClient.get(
-        AppConstants.bookUri,
+        AppConstants.bookUri + isbn,
       );
-      print(response);
+
       BookModel result = BookModel.fromJson(response);
       return result;
     } catch (e) {

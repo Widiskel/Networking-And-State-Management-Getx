@@ -104,11 +104,24 @@ class HomeView extends GetView<HomeController> {
           ),
           const TaskWidget(
             no: 2,
-            title: 'Search Book',
+            title: 'Search Book With Detail Book',
             desc:
-                'Implementasi API https://api.itbook.store/1.0/search/{Keyword}',
-            route: '',
+                'Implementasi API https://api.itbook.store/1.0/search/{Keyword} dan https://api.itbook.store/1.0/books/{isbn}',
+            route: Routes.search,
           ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: Text(
+                  controller.cr,
+                  style: const TextStyle(
+                      fontSize: 14, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );

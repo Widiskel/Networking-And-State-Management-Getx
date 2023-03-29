@@ -187,7 +187,7 @@ class BookView extends GetView<BookController> {
                       bottomRight: Radius.circular(12.0),
                     ),
                   ),
-                  child: Center(child: CircularProgressIndicator()),
+                  child: const Center(child: CircularProgressIndicator()),
                 ),
                 const Expanded(
                   child: Center(child: CircularProgressIndicator()),

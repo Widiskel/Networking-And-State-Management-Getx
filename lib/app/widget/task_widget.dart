@@ -78,10 +78,13 @@ class TaskWidget extends StatelessWidget {
                         height: 5.0,
                       ),
                       Flexible(
-                        child: Text(
-                          desc,
-                          style: const TextStyle(
-                            fontSize: 12,
+                        child: SingleChildScrollView(
+                          physics: const BouncingScrollPhysics(),
+                          child: Text(
+                            desc,
+                            style: const TextStyle(
+                              fontSize: 12,
+                            ),
                           ),
                         ),
                       ),
