@@ -1,4 +1,4 @@
-# tugas2
+# Networking and State Management Getx
 
 A new Flutter project.
 
