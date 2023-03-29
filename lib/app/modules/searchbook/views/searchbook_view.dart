@@ -77,6 +77,14 @@ class SearchbookView extends GetView<SearchbookController> {
                 if (controller.listBook.isEmpty) {
                   return const Center(child: Text('No Data Found'));
                 } else {
+                  Get.snackbar('Success.', 'Pencarian Berhasil !!!',
+                      backgroundColor: ColorPallete.bgSuccess,
+                      colorText: ColorPallete.textColor,
+                      margin: const EdgeInsets.symmetric(
+                        vertical: 30,
+                        horizontal: 10,
+                      ),
+                      snackPosition: SnackPosition.BOTTOM);
                   return ListView.builder(
                     itemCount: controller.listBook.length,
                     itemBuilder: ((context, index) {
